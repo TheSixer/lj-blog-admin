@@ -1,0 +1,978 @@
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Barousel.vue   Line:154   //  播放
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Barousel.vue   Line:159   //  暂停
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/BattleContainer.vue   Line:59   observer: true,  //  修改swiper自己或子元素时，自动初始化swiper
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/BattleContainer.vue   Line:60   observeParents: true,  //  修改swiper的父元素时，自动初始化swiper
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Breadcrumb.vue   Line:10   <router-link class="link" to="" ondragstart="return false;">{{ currentMapName.replace(' 正式版', '') }}</router-link>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Breadcrumb.vue   Line:16   <button class="module-btn favorite" type="button" name="button" @click="collect" v-track="'war3rpg_mapdetail_favorite'">{{ info && info.favorite ? $t('title.collected') : $t('title.collect') }}</button><!--收藏-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Breadcrumb.vue   Line:17   <button class="module-btn" type="button" name="button" @click="matchActivity" v-if="active" v-track="'war3rpg_mapdetail_event'">{{ $t('title.activity') }}</button><!--活动赛事-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Breadcrumb.vue   Line:18   <button class="module-btn" type="button" name="button" @click="share" v-track="'war3rpg_mapdetail_share'">{{ $t('title.share') }}</button><!--分享地图-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Breadcrumb.vue   Line:19   <button class="module-btn shortcut" type="button" name="button" @click="createShortcut" v-if="!testMap" v-track="'war3rpg_mapdetail_createshortcut'" :data-mapId="info.mapId">{{ $t('forum.shortcut') }}</button><!--桌面快捷方式-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Breadcrumb.vue   Line:89   //  收藏\取消收藏
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Button.vue   Line:12   {{ $t('title.createLadder') }}<!--创建排位赛-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/DotaContainer.vue   Line:62   observer: true,  //  修改swiper自己或子元素时，自动初始化swiper
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/DotaContainer.vue   Line:63   observeParents: true,  //  修改swiper的父元素时，自动初始化swiper
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:36   {{ $t('title.currentVersion') }}：{{ basicInfo && basicInfo.lastVersionScoreCounts >= 10 ? (basicInfo.mapVersionScoreView + $t('title.point')) : $t('title.noRating') }}
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:37   <span>|</span> {{ $t('title.inWeek') }}：{{ basicInfo && basicInfo.sevenDayScoreCounts >= 10 ? (basicInfo.sevenDayScoreView + $t('title.point')) : $t('title.noRating') }}
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:42   <span>大家认为</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:124   <span style="margin-right:14px;">{{ $t('title.duration') }}<!--游戏时间-->：{{ item.comment.gameTimeSec | formatGameDate(/en/.test($i18n.locale)) }}</span><!--版本-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:125   <span>{{ $t('title.version') }}：{{ item.comment.mapVersion }}</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:177   <button type="text" v-if="(info && info.currentUserIsAuthor && !formatLevel(item.comment.playerData.vipLevel))"><span class="btn-txt" @click="removeCommentItem(item.comment, index)">{{ $t('title.del') }}<!--删除--></span></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:178   <button type="text"><span class="btn-txt" @click="toReport(item.comment)">{{ $t('title.report') }}<!--举报--></span></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:247   <span class="reply-txt">：<span v-html="utilContent(opt.content)"></span></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:255   <button type="text" v-if="isGm || (info && info.currentUserIsAuthor)"><span class="btn-txt" @click="removeCommentReply(opt.id, item.comment.id, index, item.replyFirstPage.length > 1 ? item.comment.currentPage : item.comment.currentPage - 1)">{{ $t('title.del') }}<!--删除--></span></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:256   <button type="text"><span class="btn-txt" @click="toReport(opt)">{{ $t('title.report') }}<!--举报--></span></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:257   <button type="text" v-if="id !== opt.playerGuid" :disabled="!isOpenEvl"><span class="btn-txt" @click="reply(opt, 1, index)">{{ $t('title.reply') }}<!--回复--></span></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:283   <p class="empty-txt">{{ $t('msg.noRecords') }}</p><!--暂无排行榜信息-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:288   <span>{{ $t('title.end') }}</span><!--已经到底了-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:313   <p class="tag">{{ examJson[currentQue].tag }}  {{ examJson[currentQue].type }}类题目({{ examJson[currentQue].index }}/{{ examJson[currentQue].amount }}) </p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:357   <h4>{{ $t('title.reply') }}<!--回复-->{{ currentComment.playerName }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:358   <p class="reply">{{ currentComment.playerName }}：<span v-html="utilContent(currentComment.content)"></span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:362   <h4>{{ info.mapName.replace(' 正式版', '') }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:377   :placeholder="!currentComment ? '说一下你对【' + info.mapName + '】在玩法、画面或者其他方面的看法吧\n为了更好的提升玩家体验，请文明发言' : $t('title.reply') + currentComment.playerName + '：'"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:399   <h4>{{ info.mapName.replace(' 正式版', '') }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:440   <el-form-item :label="$t('title.userName') + '：'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:443   <el-form-item :label="$t('title.mapName') + '：'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:446   <el-form-item :label="$t('title.function') + '：'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:447   <el-select v-model="type" class="customize" :popper-append-to-body="false" placeholder="请选择功能">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:457   <el-form-item :label="$t('title.descrip') + '：'" v-if="type === '3'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:460   <el-form-item :label="$t('title.likes') + '：'" v-if="type === '4'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:463   <el-form-item :label="$t('title.dislikes') + '：'" v-if="type === '5'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:626   };  //  评论用户状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:629   private praiseNum: string = '';  //  增加赞数\减少踩数
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:630   private reason: string = '';  //  增加赞数\减少踩数
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:644   //  举报参数
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:654   private isBind: boolean = false;  //  是否绑定手机号
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:655   private templateId: number = -1;  //  模板ID
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:673   //  根据评分显示对应标签
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:703   //  写信
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:727   //  验证答案
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:757   //  举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:792   //  房管点击确定
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:839   content: '请选择操作功能',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:846   //  删除评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:869   //  删除回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:935   //  查询评论基本信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1052   //  更新单条评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1081   //  更新单条评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1100   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1109   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1118   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1127   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1132   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1143   //  举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1159   //  查询评论基本信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1161   //  查询评论基本信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1163   //  查询评分标签
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1165   //  每次切换tab都重新请求
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1167   //  加载用户在当前地图的赞踩欢数据
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1189   //  点赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1213   //  更新单条评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1223   //  更新赞踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1239   //  取消点赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1256   //  更新单条评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1266   //  更新赞踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1278   //  点踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1301   //  更新单条评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1309   //  更新赞踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1315   //  取消点踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1326   //  更新单条评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1334   //  更新赞踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1346   //  点欢乐
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1368   //  更新单条评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1376   //  更新赞踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1382   //  取消欢乐
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1393   //  更新单条评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1401   //  更新赞踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1413   //  排序方式
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1419   //  加载更多
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1425   //  获取评论数据
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1428   //  是否加载完状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1431   // 发表评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1463   confirmBtnText: '参加考试',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1478   // 提交评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1506   //  关闭窗口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1515   //  判断玩家评论是否需要审核
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1550   // 回复评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1647   //  关闭窗口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1649   //  判断玩家评论是否需要审核
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1651   //  本地记录玩家当前评论，防止刷评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1665   //  判断玩家评论是否需要审核
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:14   <button class="submit" type="button" name="button" @click="evaluate()" v-track="'war3rpg_mapdetail_comment_addcomment'">{{ $t('title.addComment') }}<!--发表评论--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:15   <button class="rate" type="button" name="button" @click="rateMap" v-track="'war3rpg_mapdetail_comment_addgrade'">{{ $t('title.addScore') }}<!--评分--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:21   <span>{{ $t('title.hotComment') }}<!--热门评论--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:24   <span>{{ $t('title.newComment') }}<!--最新评论--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:27   <span>{{ $t('title.connoisseur') }}<!--鉴赏家--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:37   <span class="filter-txt">{{ $t('title.curVersionComment') }}<!--当前版本评论--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:51   <p class="play-info"><span v-if="opt.is_yellow_vip">{{ $t('title.connoisseur') }}<!--鉴赏家-->&nbsp;&nbsp;</span>{{ $t('title.duration') }}<!--游戏时间-->：{{ opt.game_time_sec | formatGameDate }}  <!--版本-->{{ $t('title.version') }}：{{ opt.map_version }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:60   <button type="button" name="button" v-if="isGm" @click="punish(opt)"><!--房管-->{{ $t('title.gm') }}</button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:62   <button type="button" name="button" v-if="info && info.currentUserIsAuthor && !opt.re_content" @click="evaluate(opt.player_name, true, opt.comment_id, index)">{{ $t('title.reply') }}<!--回复--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:64   <button type="button" name="button" v-if="isGm || (info && info.currentUserIsAuthor && !opt.is_yellow_vip)" @click="deleteComment(opt.comment_id, false, index)">{{ $t('title.del') }}<!--删除--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:79   <button type="button" name="button" v-if="groupType !== 0" @click="addToFriend(opt)">{{ $t('title.addFriend') }}<!--添加好友--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:80   <button type="button" name="button" v-if="groupType !== 2" @click="toBeFollower(opt)">{{ $t('title.follow') }}<!--关注--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:81   <button type="button" name="button" v-if="!isGuildValid && (opt.userViewRes && !opt.userViewRes.hasGuild)" @click="inviteMemberToGuild(opt)">{{ $t('title.guildInvite') }}<!--公会邀请--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:82   <button type="button" name="button" @click="showPersonalInfo(opt)">{{ $t('title.viewPersonalInformation') }}<!--查看个人战绩--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:83   <button type="button" name="button" @click="report(opt)">{{ $t('title.report') }}<!--举报--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:84   <button type="button" name="button" v-if="groupType !== 1" @click="addToBlackList(opt)">{{ $t('title.addToBlackList') }}<!--添加到黑名单--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:88   <button type="button" name="button" @click="report(opt)">{{ $t('title.report') }}<!--举报--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:94   <p class="re-txt">{{ $t('title.authorReply') }}<!--作者回复-->：</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:100   <button type="button" name="button" v-if="info && info.currentUserIsAuthor" @click="deleteComment(opt.comment_id, true, index)">{{ $t('title.del') }}<!--删除--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:110   <p class="empty-txt">{{ $t('msg.noRecords') }}</p><!--暂无排行榜信息-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:115   <span>{{ $t('title.end') }}</span><!--已经到底了-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:175   private subType: number = -1;  //  提交 0：评论，1：回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:176   private delType: number = 0;  //  提交 0：评论，1：回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:269   //  获取地图评论评分信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:283   //  评分
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:298   //  右键用户信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:310   //  右键评论内容 - 举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:319   //  发表评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:334   //  判断用户是否为好友/已关注/有公会/拉黑
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:343   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:347   //  删除评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:354   // 确认删除该评论吗？
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:367   //  删除评论成功
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:376   //  删除评论成功
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:384   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:388   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:392   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:396   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:402   //  赞\踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:408   //  更新赞\踩集合
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:415   //  更新赞\踩数量
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:425   //  是否黄V
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:433   //  是否VIP
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:443   //  更新单条评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Evaluation.vue   Line:456   //  房管
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/GameList.vue   Line:18   <h4 class="title">{{ opt.mapName.replace(' 正式版', '') }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/GameList.vue   Line:31   <span class="update-txt">{{ $t('title.update') }}<!--可更新--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Grid.vue   Line:76   //  banner跳转
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/GuessYouLike.vue   Line:3   <m-title class="guess" :text="$t('title.guessYouLike')"/><!--猜你喜欢-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/GuessYouLike.vue   Line:23   <h4 class="title">{{ (opt.mapName && opt.mapName.replace(' 正式版', '')) }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/HomeVideo.vue   Line:58   fullscreenToggle: true,  // 全屏按钮
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/HomeVideo.vue   Line:87   //  banner跳转
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/LatestMap.vue   Line:4   <m-title class="new" :text="$t('title.newMaps')"/><!--新图速递-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/LatestMap.vue   Line:6   <button class="module-btn" type="button" name="button" @click="navigate" v-track="'war3rpg_homepage_newmaps_more'">{{ $t('title.more') }}<!--更多--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/LatestMap.vue   Line:25   <h4 class="title">{{ opt.elementName.replace(' 正式版', '') }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapActivity.vue   Line:114   //  领取任务
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapActivity.vue   Line:118   //  是否有待领取的奖励
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapActivity.vue   Line:131   return task.descript.replace(mapName, '游戏')
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:15   <span>{{ $t('title.mapAuthor') }}</span><!--地图作者-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:18   <span class="txt" v-if="info && info.unknownAuthor">{{ $t('title.anonymous') }}<!--佚名作者--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:21   <p class="btn" v-if="!(info && info.unknownAuthor)" @click="checkAuthorInfo(true)" v-track="'war3rpg_mapdetail_letter'">{{ $t('title.write') }}<!--写信--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:24   <span>{{ $t('title.gameType') }}<!--游戏类型--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:30   <span>{{ $t('title.war3Version') }}<!--war3版本--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:36   <span>{{ $t('title.playerNumber') }}<!--支持人数--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:39   <span class="txt">{{ $t('title.persons',[ (info && info.playerCount) || 0 ] ) }}<!--人--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:42   <span>{{ $t('title.mapBonus') }}<!--地图加成--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:46   <span class="txt">{{ accelerate ? `${accelerate / 100}` + $t('title.times') + $t('title.mapBonus') : $t('title.noneExperienceBonus')  }}</span><!--经验加成 暂无经验加成-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:48   <p class="btn" :class="{active: expireTime}" @mouseenter="showEndTime = true" @mouseleave="showEndTime = false" @click="useExpCard">{{ $t('title.EXPCard') }}<!--经验卡--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:50   <span class="txt" v-else>{{ `10` + $t('title.times') + $t('title.mapBonus') }}</span><!--经验加成 暂无经验加成-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:52   <div class="tips" v-if="accelerate && showEndTime && expireTime"><!--有效期至-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:53   <p class="tips-txt">{{ $t('title.expiresTo') }}：{{ expireTime | moment('YYYY-MM-DD HH:mm:ss') }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:58   <span>{{ $t('title.mapExperienceLevel') }}<!--经验等级--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:67   <p class="btn" @click="useMapExpTomes" v-if="!info.testMap">提升卡</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:70   <p class="tips-txt">当前xp：{{ Math.floor(expInfo.current_exp / 60) }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:71   <p class="tips-txt">{{ $t('title.needs') }}：{{ Math.ceil((expInfo.upgrade_exp - expInfo.current_exp) / 60) }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:77   <span>{{ $t('title.gameTime') }}<!--游戏时长--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:85   <span>{{ $t('title.betaType') }}<!--测试类型--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:91   <span>{{ $t('title.remainingKey') }}<!--剩余名额--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:98   <span>{{ $t('title.recommendRate') }}<!--游戏时长--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:106   <span>{{ $t('title.mall') }}<!--地图商城--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:109   <span class="blue" @click="toMapStore">{{ $t('title.toMall') }}<!--前往商城--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:156   //  游戏类型
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:210   //  使用经验卡
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:215   //  收藏\取消收藏
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfo.vue   Line:219   //  房间列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:242   //  帖子数量
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:244   //  补丁说明
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:252   //  评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:262   //  排行榜
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:266   private rankList: any = [];  //  排行榜数据
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:272   //  地图活动
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:288   private toLoad = throttle(this.loadMore, 1000, { trailing: false }); //  加载更多
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:315   //  查询图吧开启状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:354   //  查询图吧开启状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:356   //  初始化评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:358   //  初始化排行榜
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:364   //  获取畅销商城地址
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:366   //  当前用户是否有公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:373   //  添加监听客户端通知方法
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:382   //  移除事件监听
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:416   //  游戏结束
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:425   //  任务领取奖励
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:427   //  如果处于地图活动下，重新拉去当前任务
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:497   //  切换Tab
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:514   //  根据当前tab加载更多数据
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:527   //  加载更多
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:566   //  是否选择当前版本
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:580   //  根据条件筛选评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:592   //  刷新评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:602   //  排行榜-加载更多
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:609   //  查询排行榜类型列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:619   //  排行榜Tab切换
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapInfoTabs.vue   Line:629   //  获取排行榜数据
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:5   <span class="txt">{{ $t('title.howToPlay') }}<!--如何游戏--> <span class="new-version" v-if="!isReadHowToPlay"></span></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:8   <span class="txt">{{ $t('title.changeLog') }}<!--补丁说明 --><span class="new-version" v-if="!isReadChangelogs"></span></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:16   <span class="item-pro">{{ $t('title.betaExplanation') }}<!--基本说明-->：</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:23   <span class="item-pro">{{ $t('title.generalSpecification') }}<!--基本说明-->：</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:30   <span class="item-pro">{{ $t('title.howToWin') }}<!--如何获胜-->：</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:37   <span class="item-pro">{{ $t('title.advancedInstructions') }}<!--进阶说明-->：</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:47   <span class="item-pro">{{ $t('title.version') }} {{ item.mapVersion }}</span><!--版本-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:73   //  补丁说明
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:84   //  切换到TAB下查询补丁说明
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:91   //  查询更多补丁说明
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapIntro.vue   Line:99   //  查询补丁说明
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapSubjects.vue   Line:3   <MTitle>{{ $t('title.mapSubject') }}<!--地图专题--></MTitle>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapSwiper.vue   Line:31   <!-- 如果需要导航按钮 -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapSwiper.vue   Line:100   fullscreenToggle: true,  // 全屏按钮
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapSwiper.vue   Line:162   //  播放
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapSwiper.vue   Line:168   //  暂停
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapSwiper.vue   Line:175   //  验证视频和图片
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapSwiper.vue   Line:183   //  上一页
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapSwiper.vue   Line:192   //  下一页
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapVideo.vue   Line:25   private state: number = 0; //  0:未开始，结束 1:播放中 2: 暂停
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Menu.vue   Line:10   <li v-track="'war3rpg_category_click_全部'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Menu.vue   Line:11   <router-link :to="'/map?id=0&type=0&name=全部' + (kw ? ('&kw=' + kw) : '')" :class="{active: $route.query.id == 0}" trace-key="war3rpg_category_click_全部" ondragstart="return false;">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Menu.vue   Line:16   <router-link :to="'/map?id=' + item.id + '&type=' + item.type + '&name=' + item.name + (kw ? ('&kw=' + kw) : '')" :class="{normal: item.name === '地图活动', active: $route.query.id == item.id}" ondragstart="return false;">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MiniMap.vue   Line:10   <h4 class="name">{{ info.mapName.replace(' 正式版', '') }}
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MiniMap.vue   Line:72   //  房间列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MoreGames.vue   Line:3   <m-title class="more" :text="$t('title.moreGames')"/><!--更多游戏-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MoreGames.vue   Line:19   <h4 class="title">{{ opt.mapName.replace(' 正式版', '') | formatTitle(10) }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MoreGames.vue   Line:28   <h4 class="title">{{ opt.mapName.replace(' 正式版', '') | formatTitle(10) }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MoreGames.vue   Line:39   <p class="empty-txt" v-html="$t('msg.noMoreMaps')"></p><!--暂时没有满足条件的地图<br/>点击查看更多可以浏览其他类型的地图哦-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MoreGames.vue   Line:43   <router-link class="btn-more" :to="{name: 'tag', query: { id: 0, type: 0 }}" v-track="'war3pg_homepage_moremaps_other'">{{ $t('title.moreRecommended') }}<!--更多游戏推荐-->  》</router-link>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MoreGames.vue   Line:48   <h4 class="filter-title">{{ $t('title.filterByType') }}<!--按类别筛选--></h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MoreGames.vue   Line:67   <h4 class="filter-title">{{ $t('title.filterByTag') }}<!--按标签筛选--></h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:30   <!-- 如果需要导航按钮 -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:91   fullscreenToggle: true,  // 全屏按钮
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:130   //  处理loop：true情况下的跳转问题
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:140   //  处理loop：true情况下视频无法正常播放的问题
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:162   //  格式化banner list
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:172   //  hover隐藏翻页按钮
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:183   //  hover显示翻页按钮
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:191   //  播放
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:201   //  暂停
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:212   //  banner跳转
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:220   //  跳转置顶页面
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:228   //  上一页
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MySwiper.vue   Line:237   //  下一页
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/NormalSwiper.vue   Line:103   //  banner跳转
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Rank.vue   Line:4   <h4 class="rank-title">{{ $t('title.ranking') }}<!--排名--></h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Rank.vue   Line:8   <p class="tab-txt">{{ $t('title.popularityRanking') }}<!--人气排行--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Rank.vue   Line:11   <p class="tab-txt">{{ $t('title.newMapsRanking') }}<!--新图排行--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankB.vue   Line:6   <p class="tab-txt">{{ $t('title.popularityRecommend') }}<!--人气排行--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankB.vue   Line:9   <p class="tab-txt">{{ $t('title.newMapsRecommend') }}<!--新图排行--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankList.vue   Line:16   <h4 class="item-name">{{ opt.mapName.replace(' 正式版', '') }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankList.vue   Line:29   <div class="more" :class="{active: dataList.length}" @click="showMore" v-track="'war3rpg_homepage_ranking_more'">{{ $t('title.viewMore') }}<!--查看更多--></div>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankListB.vue   Line:13   <h4 class="item-name">{{ opt.mapName.replace(' 正式版', '') }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankListB.vue   Line:18   <div class="more" :class="{active: dataList.length}" @click="showMore" v-track="'war3rpg_homepage_ranking_more'">{{ $t('title.viewMore') }}<!--查看更多--></div>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:6   <span>{{ $t('title.gameRanking') }}<!--游戏排行--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:27   <span>{{ $t('title.myRanking') }}<!--我的排名-->：<span class="txt">{{ myRank }}</span></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:28   <span>{{ $t('title.newUpdate') }}<!--最后更新-->：{{ updateTime }}</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:55   <button type="button" name="button" @click="showPersonalInfo(item)">{{ $t('title.viewDetail') }}<!--查看详情--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:56   <button type="button" name="button" v-if="groupType !== 0" @click="addToFriend(item)">{{ $t('title.addFriend') }}<!--添加好友--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:57   <button type="button" name="button" v-if="groupType !== 2" @click="toBeFollower(item)">{{ $t('title.follow') }}<!--关注--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:58   <button type="button" name="button" v-if="isGm && rankNum !== -1" @click="dealWothBrokenRule(item)">{{ $t('title.handlingOfViolation') }}<!--违规处理--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:65   <p class="empty-txt">{{ $t('msg.noRecords') }}</p><!--暂无排行榜信息-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:192   //  滚轮滚动
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:198   //  判断用户是否为好友/已关注/有公会/拉黑
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:207   //  右键
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:221   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:225   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:229   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:244   //  我的排名
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RankOfMapDetail.vue   Line:257   //  更新时间
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Recommend.vue   Line:3   <m-title class="rcd" :text="$t('title.specialRecommend')"/><!--特别推荐-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Recommend.vue   Line:24   <h4 class="title">{{ opt.elementName.replace(' 正式版', '') }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Recommend.vue   Line:63   //  banner跳转
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RollList.vue   Line:11   <span>{{ $t('title.end') }}</span><!--已经到底了-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RollList.vue   Line:73   dom.removeEventListener('scroll', this.handleScroll); // 记得移除监听
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/SortBtnGroup.vue   Line:5   <button type="button" name="button" @click="onClick('PLAYING_DESC')">{{ $t('title.highestPopularity') }}<!--人气最高--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/SortBtnGroup.vue   Line:8   <button type="button" name="button" @click="onClick('HD')">{{ $t('title.hdTest') }}<!--高清测试--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/SortBtnGroup.vue   Line:11   <button type="button" name="button"  @click="onClick('COMMENT')">{{ $t('title.mostCommented') }}<!--评论最多--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/SortBtnGroup.vue   Line:14   <button type="button" name="button" @click="onClick('SCORE')">{{ $t('title.highestScore') }}<!--评分最高--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/SortBtnGroup.vue   Line:17   <button type="button" name="button" @click="onClick('ONLINE_TIME')">{{ $t('title.newReleases') }}<!--最新上架--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/SortBtnGroup.vue   Line:20   <button type="button" name="button" @click="onClick('UPDATE_TIME')">{{ $t('title.newUpdate') }}<!--最近更新--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapItem.vue   Line:17   <p class="txt">{{ $t('forum.author') }}：{{ data.authorName }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapItem.vue   Line:20   <p class="txt">人数：{{ data.playerCount }}人</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapItem.vue   Line:23   <p class="txt type">类型：{{ mapType(data) }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapItem.vue   Line:39   <p class="active">{{ $t('title.tickets') }}：{{ data.remainTestingQty }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapItem.vue   Line:46   <el-button type="success" :disabled="data.favourite" @click="collect" v-track="'rpgtesthome_Click_Collection'">{{ data.favourite ? '已预约' : '预约测试' }}</el-button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapItem.vue   Line:93   content: '领取失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapItem.vue   Line:114   //  收藏\取消收藏
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapItem.vue   Line:119   //  游戏类型
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapList.vue   Line:31   <p class="empty-txt" v-if="testMapList.length">{{ $t('title.moreMapInPro') }}<br/>敬请期待...</p><!--暂无排行榜信息-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/TestMapList.vue   Line:32   <p class="empty-txt" v-else>测试地图正在火热制作中哦，请先看看为您推荐的其他已上线的地图吧！<br/>敬请期待...</p><!--暂无排行榜信息-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/dialog/index.vue   Line:27   default: '这是弹框标题',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/dialog/index.vue   Line:31   default: '这是弹框内容',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/dialog/index.vue   Line:43   default: '取消',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/dialog/index.vue   Line:47   default: '确定',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/dialog/index.vue   Line:59   promise: '',  //  保存promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/dialog/index.vue   Line:68   // 确定,将promise断定为resolve状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/dialog/index.vue   Line:74   // 取消,将promise断定为reject状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/dialog/index.vue   Line:80   // 弹出messageBox,并创建promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/dialog/index.vue   Line:87   // 返回promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/DotaNormalHero/index.vue   Line:18   <p>{{ $t('title.level') }}：<span>{{ item.experience | formateHeroLevel }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/DotaNormalHero/index.vue   Line:19   <p>{{ $t('title.wins') }}：<span>{{ item.winCount }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/CreditRecord/index.vue   Line:27   <span>黄金II</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Heros/index.vue   Line:19   <p>{{ $t('title.level') }}：<span>{{ item.exp | formateHeroLevel }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Heros/index.vue   Line:20   <p>{{ $t('title.wins') }}：<span>{{ item.winCount }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/MapRecord/index.vue   Line:88   //  查询RPG游戏生涯
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/NormalHero/index.vue   Line:18   <p>{{ $t('title.level') }}：<span>{{ item.exp | formateHeroLevel }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/NormalHero/index.vue   Line:19   <p>{{ $t('title.wins') }}：<span>{{ item.winCount }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:41   // 触发清除文本域内容
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:55   //  value为编辑框输入的内容，这里我监听了一下值，当父组件调用得时候，如果给value赋值了，子组件将会显示父组件赋给的值
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:70   this.editor.config.uploadImgShowBase64 = false; // base 64 存储图片
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:71   // this.editor.config.uploadImgServer = 'http://otp.cdinfotech.top/file/upload_images';  // 配置服务器端地址
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:72   // this.editor.config.uploadImgHeaders = {}; // 自定义 header
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:73   // this.editor.config.uploadFileName = 'file'; // 后端接受上传文件的参数名
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:74   this.editor.config.uploadImgMaxSize = 10 * 1024 * 1024; // 将图片大小限制为 2M
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:75   this.editor.config.uploadImgMaxLength = 6; // 限制一次最多上传 3 张图片
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:76   // this.editor.config.uploadImgTimeout = 3 * 60 * 1000; // 设置超时时间
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:77   this.editor.config.showFullScreen = false;  // 配置全屏功能按钮是否展示
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:78   // 取消自动 focus
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:82   // 配置菜单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:84   'head', // 标题
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:85   'bold', // 粗体
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:86   'italic', // 斜体
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:87   'underline', // 下划线
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:88   'emoticon', // 表情
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:89   'image', // 插入图片
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:117   // 隐藏“网络图片”tab
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:119   // 限制一次最多上传 1 张图片
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:142   // files 是 input 中选中的文件列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:143   // insert 是获取图片 url 后，插入到编辑器的方法
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:145   // 上传代码返回结果之后，将图片插入到编辑器中
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:151   this.editor.config.customAlert('只支持上传JPG和PNG格式的图片');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:157   this.content = html; // 绑定当前逐渐地值
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:158   this.$emit('change', this.content); // 将内容同步到父组件中
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:160   // 自定义处理粘贴的文本内容
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:162   // content 即粘贴过来的内容（html 或 纯文本），可进行自定义处理然后返回
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:167   // info 是需要提示的内容
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:176   // 创建富文本编辑器
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:201   const img = new Image();  //  手动创建一个Image对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlatformEditor/index.vue   Line:202   img.src = window.URL.createObjectURL(files[0]); // 创建Image的对象的url
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlayerBasicInfo/index.vue   Line:19   <!-- <p class="status" :class="[seasonInfo.online ? 'online' : 'offline']" v-if="seasonInfo"><span class="icon" :class="[seasonInfo.online ? 'icon-online' : 'icon-hide']"></span> {{  seasonInfo.online ? '在线' : '离线' }}</p> -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/PlayerBasicInfo/index.vue   Line:62   //  Moba当前赛季信息和个人战绩汇总信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:46   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:68   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:171   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:193   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:313   .replace(/3/, '拆').replace(/4/, this.$t('title.assist') + '')
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:314   .replace(/5/, '魂').split(' ');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:318   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:327   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:336   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:345   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ResultInfo/index.vue   Line:349   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:11   label="名次"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:15   <span class="friends">{{ data && data.mode_type === 2 ? '名次' : data.team_info.filter(item => item.team_id === 0)[0].team_name }}</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:54   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:170   label="黑暗力量"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:210   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:383   .replace(/3/, '拆').replace(/4/, this.$t('title.assist') + '')
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:384   .replace(/5/, '魂').split(' ');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:388   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:397   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:406   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:415   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/RpgResultInfo/index.vue   Line:419   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/sign/index.vue   Line:9   <p v-if="mapSign">下载官方对战平台APP<br/>手机签到额外领取10%积分</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/sign/index.vue   Line:13   <p class="txt">{{ $t('title.activityTime') }}：{{ monday }}-{{ sunday | moment('M.DD') }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/sign/index.vue   Line:16   <p class="txt">{{ $t('title.points') }}：{{ integral }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/sign/index.vue   Line:72   (opt.mapItemCfgDTO.cfgConsumeType === 1 ? `${Math.floor(opt.item_count / 86400)}天` : (opt.item_count + (opt.mapItemCfgDTO.cfgConsumeLimit === 1 ? '局' : '个')))
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/sign/index.vue   Line:75   积分x{{ gotScores }}已放入您的道具背包中
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/sign/index.vue   Line:91   <p>立即提升1小时地图经验<br/>需要60积分兑换</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/upgrade/index.vue   Line:80   danText: '黄金',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/upgrade/index.vue   Line:126   // 弹出messageBox,并创建promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Vote/index.vue   Line:3   <p class="topic-vote-title"><span>#投票#</span>{{ vote.title }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Vote/index.vue   Line:12   <p class="topic-vote-end-time">{{ vote.endTime | moment('YYYY-MM-DD HH:mm') }}结束</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/VoteCompo/index.vue   Line:3   <p class="topic-vote-title"><span>#投票#</span>{{ pollInfo.title }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/VoteCompo/index.vue   Line:11   <span class="percentage" :class="{'is-selected': optionIds.includes(opt.optionId)}" v-if="hasVoted || isEnded">{{ opt.selectCount || 0 }}票 {{ caculate(opt.selectCount) }}%</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/VoteCompo/index.vue   Line:14   <el-button @click="submitVote" :disabled="(pollInfo.voteType === 1 && !optionId) || (pollInfo.voteType !== 1 && !optionIds.length)" v-if="!hasVoted && !isEnded">投票</el-button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/VoteCompo/index.vue   Line:16   <span><span v-if="!hasVoted">{{ $t('title.didntVote') }}，</span>{{ $t('title.xPlayersVoted', {num: pollInfo.votersCount || 0}) }}</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/VoteCompo/index.vue   Line:17   <span v-if="!isEnded">{{ pollInfo.endTime | moment('YYYY-MM-DD HH:mm') }}结束</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/VoteCompo/index.vue   Line:107   //  记录埋点
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ActTopicList/TopicListItem/index.vue   Line:9   <p class="map-forum-list-item-time">{{ $t('myCenter.postOn') }}：{{ data.topicDetail.releaseTime | moment }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/ActTopicList/TopicListItem/index.vue   Line:12   <p class="map-forum-item-content-text" @click.stop="checkIn(data)" v-track="'click_post_text'"><span v-if="data.topicDetail.topicPolls">#投票#</span>{{ formatContent(data.topicDetail.content, data.topicDetail.topicPolls) }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/CollectTopicList/TopicListItem/index.vue   Line:10   <p class="map-forum-list-item-time">{{ $t('myCenter.postOn') }}：{{ data.releaseTime | moment }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/CollectTopicList/TopicListItem/index.vue   Line:28   <p class="map-forum-item-content-text" @click.stop="checkIn(data)" v-track="'click_post_text'"><span v-if="data.topicPolls">#投票#</span>{{ formatContent(data.content, data.topicPolls) }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/CommentList/CommentListItem/index.vue   Line:4   <p class="comment-list-item-content-txt" v-if="data.rpgMapCommentsVo && !data.rpgMapCommentsVo.isHide">{{ isCurrentUser ? $t('myCenter.myComment') : $t('myCenter.hisComment') }}：<span v-html="utilContent(data.rpgMapCommentsVo.content)"></span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/CommentList/CommentListItem/index.vue   Line:38   //  当前用户是否被查看用户
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/Collection/index.vue   Line:7   <p><el-tag type="danger" v-if="item.isBest">精</el-tag>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/Collection/index.vue   Line:69   //  收藏
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/Collection/index.vue   Line:95   //  取消收藏
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:39   <radio-button :label="''" v-track="`click_post_type`" :data-typename="'全部'" border>{{ $t('title.all') }}</radio-button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:162   <p class="form-item-view-txt">{{ $t('forum.postOn') }}：{{ form.mapName || info.mapName }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:247   <span>{{ $t('forum.draft') }}（{{ drafts.length }}/20）</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:264   <el-form-item :label="$t('title.userName') + '：'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:267   <el-form-item :label="$t('title.mapName') + '：'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:270   <el-form-item :label="$t('title.function') + '：'" v-if="curTopic">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:271   <el-select v-model="type" class="customize" :popper-append-to-body="false" placeholder="请选择功能">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:281   <el-form-item :label="(type === '5' ? $t('title.likes') : $t('title.dislikes')) + '：'" v-if="type === '5' || type === '6'">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:468   private isEdit: boolean = false;  //  发帖框显示
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:469   private isShowDraft: boolean = false;  //  草稿箱显示
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:470   private gmFormVisible: boolean = false;  //  房管操作显示
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:471   private reportVisible: boolean = false;  //  举报操作显示
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:473   private keyword: string = '';  //  搜索关键字
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:474   private sort: number = 1;  //  排序值
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:475   private type: string = '';  //  房管操作类型
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:488   private isBind: boolean = false;  //  是否绑定手机号
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:490   private topicTypes: TopicType[] = []; //  帖子分类
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:524   //  搜索参数
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:533   //  举报参数
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:552   private search = debounce(this.searchByName, 1000, { maxWait: 1500 });  //  搜索
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:553   private subReport = throttle(this.submitReport, 1000, { trailing: false }); //  举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:554   private saveType = throttle(this.saveNewType, 1000, { trailing: false }); //  举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:556   //  全部帖子
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:563   //  当前文字长度
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:584   //  设置store投票数据
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:586   //  初始化发帖表单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:715   //  处理房管赞踩结果
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:719   //  手动增加赞/减少踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:743   content: '操作成功',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:756   //  置顶
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:761   this._handleTopResult(this.$t('forum.t'), status, '置顶', message);
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:766   //  取消置顶
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:771   this._handleTopResult(this.$t('forum.ct'), status, '取消置顶', message);
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:776   //  加精
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:781   this._handleTopResult(this.$t('forum.f'), status, '加精', message);
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:786   //  取消加精
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:791   this._handleTopResult(this.$t('forum.cf'), status, '取消加精', message);
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:796   //  禁言
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:800   content: '禁言后玩家不可发帖和回复，需要通过作者之家解禁，确认禁言？',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:816   this._handleTopResult(this.$t('forum.m'), status, '禁言', message);
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:821   //  删除帖子
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:845   //  删除帖子
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:854   this._handleTopResult(this.$t('forum.d'), status, '删除', message);
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:859   //  删除自己的帖子
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:868   this._handleTopResult(this.$t('forum.d'), status, '删除', message);
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:873   //  处理接口返回逻辑
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:895   //  存草稿
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:911   //  投票数据
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:925   //  玩家权限状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:936   //  获取赞踩记录
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:947   //  发帖
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:980   //  发帖
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1031   //  投票数据
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1041   //  替换投票dom结构
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1053   //  举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1089   //  编辑器改变回调
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1098   //  搜索帖子
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1107   //  查询收件箱
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1130   if (praisedCount === 1 && idx > -1 && this.praiseList[idx].praise === -1) { //  已点踩时点赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1133   } else if (unpraisedCount === 1 && idx > -1 && this.praiseList[idx].praise === 1) { //  已点赞时点踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1148   if (praisedCount === 1 && idx > -1 && this.praiseList[idx].praise === -1) { //  已点踩时点赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1151   } else if (unpraisedCount === 1 && idx > -1 && this.praiseList[idx].praise === 1) { //  已点赞时点踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1166   if (praisedCount === 1 && idx > -1 && this.praiseList[idx].praise === -1) { //  已点踩时点赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1169   } else if (unpraisedCount === 1 && idx > -1 && this.praiseList[idx].praise === 1) { //  已点赞时点踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1185   if (praisedCount === 1 && idx > -1 && this.praiseList[idx].praise === -1) { //  已点踩时点赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1188   } else if (unpraisedCount === 1 && idx > -1 && this.praiseList[idx].praise === 1) { //  已点赞时点踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1214   //  点欢乐
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1219   //  更新欢乐记录
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1241   //  取消欢乐
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1246   //  更新欢乐记录
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1268   //  点赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1273   //  更新赞踩记录
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1295   //  取消赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1300   //  更新赞踩记录
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1322   //  点踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1327   //  更新赞踩记录
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1349   //  取消踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1375   //  评论成功，更新评论数
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1397   //  搜索图吧帖子
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1404   //  搜索埋点
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1419   //  帖子列表分页查询
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1437   //  发帖权限
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1461   //  是否本地有缓存，如有，展示
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1468   //  作者默认置顶/加精
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1472   // 开启自动保存功能
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1495   //  定时保存
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1502   //  保存至本地缓存
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1520   //  清空缓存
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1572   //  记录点击
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1578   //  查询图吧置顶数据(平台规范+置顶帖+用户审核中帖子)
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1605   //  返回图吧默认列表原来位置
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1611   //  收藏/取消收藏重新查询
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1629   //  查询帖子分类
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1638   //  更新收藏列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1642   //  玩家发帖/我的收藏
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1652   //  排序
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1669   //  类型筛选
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1686   //  查看详情
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1699   //  记录埋点
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1723   //  处理返回结果
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1733   //  操作反馈
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1737   case '置顶':
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1746   case '取消置顶':
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1754   case '加精':
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1755   case '取消加精':
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1758   case '删除':
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1785   //  关闭埋点
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1788   //  停止自动保存
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1801   //  停止自动保存
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1806   //  停止自动保存
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1833   //  发帖\保存草稿成功，清空缓存
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1835   //  发帖\保存草稿成功，清空store投票数据
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1894   //  向编辑器插入投票组件
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1898   //  重置投票表单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1912   //  重置投票表单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:75   <button type="text" @click="report(data)" v-if="id !== data.playerId" v-track="'post_reply_click_report'"><span class="btn-txt">{{ $t('title.report') }}<!--举报--></span></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:102   <h4>{{ $t('title.reply') }}<!--回复-->{{ currentComment.userViewRes.playerName }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:103   <p class="reply">{{ currentComment.userViewRes.playerName }}：<span v-html="utilContent(currentComment.content)"></span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:178   };  //  评论用户状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:279   //  举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:290   //  回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:310   //  回复回复时的用户id
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:338   //  禁言
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:343   //  删除评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:370   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:375   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:380   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:385   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/CommentItem/index.vue   Line:390   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/Comment/index.vue   Line:4   <p class="forum-comment-header-txt">{{ $t('forum.allReplies') }}（{{replyCount}}）</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/DraftList/index.vue   Line:40   //  删除
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/DraftList/index.vue   Line:54   //  确认删除
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:36   <p class="map-forum-txt"><span v-if="!data.isAuthor">{{ $t('title.duration') }}：{{ data.gameTimeSec | formatGameDate(/en/.test($i18n.locale)) }}</span><span>{{ $t('title.version') }}：{{ data.mapVersion }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:322   };  //  评论用户状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:324   private templateId: number = -1;  //  模板ID
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:350   //  获取赞踩记录
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:390   //  点赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:410   //  取消赞
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:430   //  处理点赞/取消赞结果
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:432   //  更新点赞的状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:449   //  更新点赞的数量
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:465   //  欢乐\取消欢乐\点赞\取消赞\点踩\取消踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:476   //  禁言
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:480   content: '禁言后玩家不可发帖和回复，需要通过作者之家解禁，确认禁言？',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:535   // 删除我的评论/回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:554   // 删除评论/回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:574   // 收藏
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:598   // 取消收藏
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:624   //  举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:634   //  回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:661   //  发布评论/回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:707   //  查询帖子评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:719   //  查询帖子评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:739   //  评论排序
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:746   //  更新单条回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:757   //  回复数+1
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:790   //  加载更多
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:800   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:805   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:810   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:815   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:820   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:825   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:851   //  取消关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:871   //  下拉加载
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:877   //  用户身份
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ForumArticle/index.vue   Line:986   //  是否已关注文章作者
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:64   <span class="forum-reply-content">：
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:95   <button type="text" @click="report(data)" v-if="id !== data.playerId" v-track="'post_reply_click_report'"><span class="btn-txt">{{ $t('title.report') }}<!--举报--></span></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:149   };  //  评论用户状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:172   //  举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:183   //  禁言
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:189   //  删除评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:234   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:239   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:244   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:249   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/ReplyListItem/index.vue   Line:254   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:21   <!--游戏时间-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:22   <!-- <span class="map-forum-other-info-txt" v-if="!data.isAuthor">{{ $t('title.duration') }}：{{ data.gameTimeSec | formatGameDate(/en/.test($i18n.locale)) }}</span> -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:23   <!--版本-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:24   <!-- <span class="map-forum-other-info-txt" v-if="data.mapVersion">{{ $t('title.version') }}：{{ data.mapVersion }}</span> -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:61   <span v-if="data.topicPolls">#投票#</span>{{ formatIntro(data.content, data.topicPolls) }}
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:171   };  //  评论用户状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:213   //  举报
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:246   //  欢乐\取消欢乐\点赞\取消赞\点踩\取消踩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:256   //  查询用户状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:267   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:272   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:277   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:282   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:287   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:303   //  已读
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/TopicListItem/index.vue   Line:307   //  埋点
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/modal/index.vue   Line:35   default: '这是弹框内容',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/modal/index.vue   Line:47   default: '取消',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/modal/index.vue   Line:51   default: '确定',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/modal/index.vue   Line:63   promise: '',  //  保存promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/modal/index.vue   Line:74   // 确定,将promise断定为resolve状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/modal/index.vue   Line:80   // 取消,将promise断定为reject状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/modal/index.vue   Line:86   // 弹出messageBox,并创建promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/modal/index.vue   Line:93   // 返回promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:23   default: '亲爱的玩家： ',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:28   测试专区内的地图尚未正式上线,不存在任何商业化<br/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:29   测试期间<span>游戏数据不做保留</span><br/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:30   它们或许有bug等问题<br/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:31   但你可以提前发现新鲜有趣的地图<br/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:32   测试地图享受<span>10倍地图经验加成</span><br/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:33   部分地图还有测试礼包相送<br/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:34   希望你能提出你的建议，帮助作者提升地图的质量<br/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:35   在发现好玩的地图路上遇到更多惊喜吧!<br/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:44   promise: '',  //  保存promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:53   // 弹出messageBox,并创建promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/tips/index.vue   Line:60   // 返回promise对象
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/About.vue   Line:4   <p>{{ $t('title.imgagePreview') }}：</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/Home.vue   Line:41   //  外部直接进入地图详情
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/Home.vue   Line:43   //  隐藏客户端菜单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/Home.vue   Line:56   //  在当前路由下监听参数变化，改变地图列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/Home.vue   Line:65   //  根据浏览器窗口变化改变滚动区域大小
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/Home.vue   Line:67   //  根据浏览器窗口变化改变滚动区域大小
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/Home.vue   Line:94   console.log('页面激活');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/Home.vue   Line:100   console.log('页面非激活');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/Home.vue   Line:104   // 浏览器视口的高度
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/Home.vue   Line:114   // 浏览器视口的高度
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:62   <!-- <el-button type="primary" :disabled="false" @click="formVisible = true">反馈</el-button> -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:95   <img src="../assets/images/barcode.png" alt="小魔盒" ondragstart="return false;">
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:120   <h3 class="module-txt">{{ $t('title.roomList') }}<!--房间列表--></h3>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:123   <button v-if="roomList.length" :disabled="mapInfo && tMapInfo && mapInfo.testMap && (!tMapInfo.active || !tMapInfo.isCurrentUserActive)" class="module-btn" type="button" name="button" @click="openRoomList"  v-track="'war3rpg_mapdetail_room_moreroom'">{{ $t('title.viewMore') }}<!--查看更多--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:130   <th width="87">{{ $t('title.name') }}<!--加入--></th>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:131   <th width="51">{{ $t('title.mode') }}<!--模式--></th>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:132   <th width="78">{{ $t('title.playerAndLevel') }}<!--人数/等级--></th>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:151   <p class="link disabled" v-else>{{ $t('title.join') }}<!--加入--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:162   <h3 class="module-txt">{{ $t('title.watch') }}<!--观战--></h3>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:164   <button :disabled="mapInfo.testMap" class="module-btn" type="button" name="button" @click="openLobbyWatch" v-track="'war3rpg_mapdetail_watchmore'">{{ $t('title.viewMore') }}<!--查看更多--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:171   <p class="link" v-if="!mapInfo.testMap" @click="watchGame(opt)">{{ $t('title.watch') }}<!--观战--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:172   <p class="link disabled" v-else>{{ $t('title.watch') }}<!--观战--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:179   <h3 class="module-txt">{{ $t('title.guild') }}<!--公会--></h3>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:181   <button class="module-btn" type="button" name="button" @click="openGuildList"  v-track="'war3rpg_mapdetail_guild'">{{ $t('title.viewMore') }}<!--查看更多--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:187   <span class="link" @click="joinGuild(opt)" v-track="'war3rpg_mapdetail_guild_join'">{{ $t('title.join') }}<!--加入--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:193   <h3 class="module-txt">{{ $t('title.chatRoom') }}<!--聊天室--></h3>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:195   <button class="module-btn" type="button" name="button" @click="enterChatRoom" v-track="'war3rpg_mapdetail_chat'">{{ $t('title.joinChatRoom') }}<!--加入聊天--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:212   暂停测试
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:238   <p class="guide-txt">{{ $t('title.gameAutoCreating') }}<!--游戏自动创建中--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:244   {{ $t('title.createRoom') }}<!--创建房间-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:257   <!--快速加入-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:268   {{ $t('title.quickMatch') }}<!--快速匹配-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:277   {{ $t('title.quickMatch') }}<!--快速匹配-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:285   {{ $t('title.createLadder') }}<!--创建排位赛-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:300   <!--快速匹配-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:338   {{ $t('title.return') }}<!--返回-->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:562   @Action private queryFaces!: any; //  查询表情
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:633   //  在当前路由下监听参数变化，改变地图列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:703   //  图片上传成功
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:804   //  领取资格
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:822   //  错误处理
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:849   //  收藏\取消收藏
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:860   //  快速加入
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:870   // 快速加入
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:920   //  快速匹配
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:930   // 快速匹配
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:942   // 快速匹配
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1012   //  切换Tab
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1036   obj.name = obj.modeName + `（${this.$t('title.mapLevel')}>${item.mapLevelMin}）`;
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1039   obj.name = obj.modeName + `（${this.$t('title.mapLevel')}<${item.mapLevelMax}）`;
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1042   obj.name = obj.modeName + `（${item.mapLevelMin}<${this.$t('title.mapLevel')}<${item.mapLevelMax}）`;
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1052   //  商城入口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1067   //  获取房间列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1081   // 浏览器视口的高度
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1096   //  注销任务更新通知
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1098   //  清除观战自动请求
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1105   //  刷新地图信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1125   //  获取当前用户地图经验
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1141   //  游戏结束，刷新信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1147   //  测试地图
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1151   //  第一次-反馈
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1209   //  是否开启评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1214   //  查询签到开启状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1216   //  定时查询观战和房间列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1218   //  查询表情
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1220   //  查询评论模板
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1222   //  订阅任务更新通知
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1225   //  隐藏客户端Tab
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1227   //  当前用户是否为房管
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1232   //  获取经验加成
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1234   //  监听窗口大小改变
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1244   //  页面失去焦点
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1250   //  回到平台
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1256   //  是否新手
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1268   //  是否弹过绑定战网弹窗
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1329   //  查询观战和房间列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1350   //  更新红点状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1387   //  是否弹过绑定战网弹窗
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1428   //  是否从测试码入口进的
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1435   //  记录红点
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1449   //  查询测试地图信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1475   //  查询获奖信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1504   //  领取奖励并收藏地图
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1517   //  领取奖励
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1554   //  查看公会列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1558   //  查看更多观战
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1563   //  申请加入公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1567   //  加入聊天室
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1572   //  房间列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1585   //  加入房间
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1626   //  观战
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1642   // 创建房间
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1647   // 创建测试地图房间
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1678   // 创建天梯
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1702   //  清除右键产生的禁用滚动效果
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/MapDetail.vue   Line:1735   //  签到开关
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfPraise.vue   Line:44   <p class="topic-item-content"><span v-if="topic.topicPolls">#投票#</span>{{formatContent(topic.content, topic.topicPolls)}}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfPraise.vue   Line:175   //  回到平台
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfPraise.vue   Line:241   //  查询帖子详情
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfPraise.vue   Line:250   //  查询帖子评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfPraise.vue   Line:321   //  查询图吧开启状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:60   <p class="topic-item-content"><span v-if="topic.topicPolls">#投票#</span>{{ formatContent(topic.content, topic.topicPolls) }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:171   <p>{{ currentItem.fromMapAuthor ? $t('forum.author') : currentItem.fromPlayerData.playerName }}：<span v-html="utilContent(currentItem.content)"></span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:182   :placeholder="$t('title.reply') + (currentItem.fromMapAuthor ? $t('forum.author') : currentItem.fromPlayerData.playerName) + '：'"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:252   private isBind: boolean = false;  //  是否绑定手机号
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:253   private templateId: number = -1;  //  模板ID
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:298   //  查询评论模板
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:301   //  回到平台
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:305   //  是否绑定手机号
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:314   //  查询图吧开启状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:473   //  查询帖子详情
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:478   //  查询帖子评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:485   //  查询帖子评论
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:523   //  回复
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:570   //  关闭窗口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/NoteOfComment.vue   Line:615   //  关闭窗口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Index.vue   Line:40   <!-- 新图速递 -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Index.vue   Line:44   <!-- 视频模块 -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Index.vue   Line:48   <!-- 猜你喜欢 -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Index.vue   Line:52   <!-- 地图专题 -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Index.vue   Line:55   <!-- 更多游戏 -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Index.vue   Line:245   //  后退
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Index.vue   Line:252   //  在当前路由下监听参数变化，改变地图列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:49   <p>{{ $t('title.noMapsInLobby') }}<!--抱歉....游戏大厅内找不到您搜索的地图--></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:52   <button class="btn-primary" type="button" name="button" @click="openRoonList">{{ $t('title.roomList') }}<!--房间列表--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:53   <button class="btn-default" type="button" name="button" @click="submitFeedback">{{ $t('title.feedback') }}<!--用户反馈--></button>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:113   private load = throttle(this.loadMore, 1000, { trailing: false }); //  滚动加载
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:119   //  后退
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:130   //  在当前路由下监听参数变化，改变地图列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:132   //  清除浏览器缓存滚动条位置
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:140   if (id && tabName && tabName.indexOf('高清') > -1) {
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:145   if (tabName && tabName.indexOf('高清') > -1 && !localStorage.hd) {
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:157   //  是否显示vip礼包
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:165   if (!this.hasHDFree || !id || !tabName || tabName.indexOf('高清') === -1) {
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:171   //  是否显示vip礼包
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:177   //  是否显示vip礼包
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:192   if (!this.hasHDFree || !id || !tabName || tabName.indexOf('高清') === -1) {
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:214   return this.hasHDFree && id && tabName && tabName.indexOf('高清') > -1;
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:264   //  记录tagId
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:272   if (!this.hasHDFree || !id || !tabName || tabName.indexOf('高清') === -1) {
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:286   //  加载更多
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:290   //  标签筛选
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:311   //  记录tabId
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:329   if (!this.hasHDFree || !id || !tabName || tabName.indexOf('高清') === -1) {
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:336   //  排序
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:343   if (!this.hasHDFree || !id || !tabName || tabName.indexOf('高清') === -1) {
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/home/Tag.vue   Line:349   //  排序
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/write/index.vue   Line:105   //  图片上传成功
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/author/index.vue   Line:16   <p class="txt gray masterpiece">{{ $t('title.representative') }}：{{ authorInfo.masterpiece && authorInfo.masterpiece.slice(0, 16) }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/author/index.vue   Line:33   <h4 class="title">{{ opt.mapName.replace(' 正式版', '') }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/author/index.vue   Line:46   <span class="update-txt">{{ $t('title.update') }}<!--可更新--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/author/index.vue   Line:132   //  在当前路由下监听参数变化，改变地图列表
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/author/detail/index.vue   Line:24   <p class="txt gray masterpiece">{{ $t('title.representative') }}：{{ authorInfo.masterpiece }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/author/detail/index.vue   Line:32   <!-- <div class="btn">写信给作者</div> -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/author/detail/index.vue   Line:74   <h4 class="title">{{ opt.mapName.replace(' 正式版', '') }}</h4>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/author/detail/index.vue   Line:87   <span class="update-txt">{{ $t('title.update') }}<!--可更新--></span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/index.vue   Line:56   <span>瞧尔萨斯</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/index.vue   Line:68   <span>1-10人</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/index.vue   Line:73   <span>QQ群</span>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/index.vue   Line:198   //  获取畅销商城地址
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/index.vue   Line:208   //  移除事件监听
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/index.vue   Line:217   //  游戏结束
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/rank/index.vue   Line:9   <p class="update-time">{{ $t('title.latestUpdate') }}：<span>{{ (new Date()) | moment('YYYY-MM-DD HH:mm') }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/rank/index.vue   Line:280   //  Moba当前赛季信息和个人战绩汇总信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/rank/index.vue   Line:336   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/rank/index.vue   Line:340   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/rank/index.vue   Line:344   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/rank/index.vue   Line:353   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/moba/rank/index.vue   Line:357   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rank/index.vue   Line:9   '胜',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rank/index.vue   Line:10   '负',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rank/index.vue   Line:44   //  rpg接口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rank/index.vue   Line:98   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rank/index.vue   Line:103   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rank/index.vue   Line:152   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rank/index.vue   Line:159   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/war3/index.vue   Line:161   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/war3/index.vue   Line:166   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/war3/index.vue   Line:215   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/war3/index.vue   Line:222   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/war3/index.vue   Line:262   //  查询所有英雄数据统计
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/war3/index.vue   Line:277   //  周战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/war3/index.vue   Line:291   //  获取个人对战辉煌战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/recentGames/index.vue   Line:19   <p class="txt" :class="[ item.isWin ? 'win' : 'lose' ]">{{ item.isWin ? '胜利' : '失败' }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/recentGames/index.vue   Line:99   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/recentGames/index.vue   Line:121   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/recentGames/index.vue   Line:185   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/recentGames/index.vue   Line:207   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/recentGames/index.vue   Line:326   .replace(/3/, '拆').replace(/4/, this.$t('title.assist') + '')
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/recentGames/index.vue   Line:327   .replace(/5/, '魂').split(' ');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/index/index.vue   Line:57   name="荣誉战绩"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/index/index.vue   Line:158   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/index/index.vue   Line:163   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/index/index.vue   Line:212   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/index/index.vue   Line:219   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/index/index.vue   Line:241   return ['MVP', '杀', '辅' , '拆', '魂'];
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/index/index.vue   Line:277   //  周战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/index/index.vue   Line:307   //  荣誉战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/record/index.vue   Line:18   <p class="txt" :class="[ item.isWin ? 'win' : 'lose' ]">{{ item.isWin ? '胜利' : '失败' }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/record/index.vue   Line:59   <p class="integer">{{ $t('title.gamePoints') }}：<span v-if="result.rewardExp > 0">+</span>{{ result.rewardExp }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/record/index.vue   Line:98   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/record/index.vue   Line:120   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/record/index.vue   Line:182   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/record/index.vue   Line:204   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/record/index.vue   Line:321   .replace(/3/, '拆').replace(/4/, this.$t('title.assist') + '')
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/dota/record/index.vue   Line:322   .replace(/5/, '魂');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:54   name="荣誉战绩"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:156   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:161   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:210   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:217   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:262   //  Moba当前赛季信息和个人战绩汇总信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:275   //  查询所有英雄数据统计
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:286   //  指定玩家的角色信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:301   //  周战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:313   //  荣誉战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/index/index.vue   Line:323   //  常用英雄数据统计
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/record/index.vue   Line:20   <p class="txt" :class="[ item.isWin ? 'win' : 'lose' ]">{{ item.isWin ? '胜利' : '失败' }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/record/index.vue   Line:62   <p class="integer">{{ $t('title.gamePoints') }}：<span v-if="result.rewardExp > 0">+</span>{{ result.rewardExp }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/record/index.vue   Line:102   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/record/index.vue   Line:124   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/record/index.vue   Line:188   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/record/index.vue   Line:210   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/record/index.vue   Line:327   .replace(/3/, '拆').replace(/4/, this.$t('title.assist') + '')
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/moba/record/index.vue   Line:328   .replace(/5/, '魂').split(' ');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/index/index.vue   Line:59   //  rpg接口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/index/index.vue   Line:117   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/index/index.vue   Line:122   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/index/index.vue   Line:171   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/index/index.vue   Line:178   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/index/index.vue   Line:207   // 查询RPG赛季信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/rank/index.vue   Line:9   '胜',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/rank/index.vue   Line:10   '负',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/rank/index.vue   Line:44   //  rpg接口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/rank/index.vue   Line:102   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/rank/index.vue   Line:107   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/rank/index.vue   Line:156   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/rank/index.vue   Line:163   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/record/index.vue   Line:18   <p class="txt" :class="[ item.isWin ? 'win' : 'lose' ]">{{ item.isWin ? '胜利' : '失败' }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/record/index.vue   Line:66   <p class="integer">{{ $t('title.gamePoints') }}：<span v-if="integral > 0">+</span>{{ integral }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/record/index.vue   Line:148   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/record/index.vue   Line:273   .replace(/3/, '拆').replace(/4/, this.$t('title.assist') + '')
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/personal/rpg/record/index.vue   Line:274   .replace(/5/, '魂').split(' ');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/dota/index.vue   Line:10   <p class="update-time">{{ $t('title.latestUpdate') }}：<span>{{ (new Date()) | moment('YYYY-MM-DD HH:mm') }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/dota/index.vue   Line:246   //  当前用户是否有公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/dota/index.vue   Line:276   //  Moba当前赛季信息和个人战绩汇总信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/dota/index.vue   Line:332   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/dota/index.vue   Line:341   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/dota/index.vue   Line:350   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/dota/index.vue   Line:359   //  申请加入公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/dota/index.vue   Line:368   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/dota/index.vue   Line:377   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/rpg/index.vue   Line:11   <p class="update-time">{{ $t('title.latestUpdate') }}：<span>{{ (new Date()) | moment('YYYY-MM-DD HH:mm') }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/rpg/index.vue   Line:261   //  当前用户是否有公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/rpg/index.vue   Line:334   //  Moba当前赛季信息和个人战绩汇总信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/rpg/index.vue   Line:387   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/rpg/index.vue   Line:396   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/rpg/index.vue   Line:405   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/rpg/index.vue   Line:414   //  申请加入公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/rpg/index.vue   Line:423   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/rpg/index.vue   Line:432   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/moba/index.vue   Line:10   <p class="update-time">{{ $t('title.latestUpdate') }}：<span>{{ (new Date()) | moment('YYYY-MM-DD HH:mm') }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/moba/index.vue   Line:244   //  当前用户是否有公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/moba/index.vue   Line:300   //  Moba当前赛季信息和个人战绩汇总信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/moba/index.vue   Line:356   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/moba/index.vue   Line:365   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/moba/index.vue   Line:374   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/moba/index.vue   Line:383   //  申请加入公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/moba/index.vue   Line:392   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/moba/index.vue   Line:396   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/index.vue   Line:14   <p class="update-time">{{ $t('title.latestUpdate') }}：<span>{{ (new Date()) | moment('YYYY-MM-DD HH:mm') }}</span></p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeOne/index.vue   Line:251   //  当前用户是否有公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeOne/index.vue   Line:294   //  Moba当前赛季信息和个人战绩汇总信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeOne/index.vue   Line:345   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeOne/index.vue   Line:354   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeOne/index.vue   Line:363   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeOne/index.vue   Line:372   //  申请加入公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeOne/index.vue   Line:381   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeOne/index.vue   Line:390   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeTwo/index.vue   Line:249   //  当前用户是否有公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeTwo/index.vue   Line:289   //  Moba当前赛季信息和个人战绩汇总信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeTwo/index.vue   Line:340   //  关注
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeTwo/index.vue   Line:349   //  添加好友
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeTwo/index.vue   Line:358   //  添加黑名单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeTwo/index.vue   Line:367   //  申请加入公会
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeTwo/index.vue   Line:376   //  公会邀请
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/rank/war3/modeTwo/index.vue   Line:385   //  查看详情（个人战绩）
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/activity/index.vue   Line:37   //  当前用户是否被查看用户
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/activity/index.vue   Line:50   //  下拉调取子路由加载方法
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/activity/index.vue   Line:54   //  更新加载状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/activity/comment/index.vue   Line:11   <error class="delay" :text="$t('myCenter.noReviews', {name: isCurrentUser ? '你' : 'TA'})" v-if="!loading && !commentList.length"/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/activity/comment/index.vue   Line:45   //  当前用户是否被查看用户
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/activity/comment/index.vue   Line:56   //  获取
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/activity/topic/index.vue   Line:11   <error class="delay" :text="$t('myCenter.noPosts', {name: isCurrentUser ? '你' : 'TA'})" v-if="!loading && !topicList.length"/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/activity/topic/index.vue   Line:51   //  当前用户是否被查看用户
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/activity/topic/index.vue   Line:62   //  获取
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/collection/index.vue   Line:10   <!-- <el-tab-pane label="地图" name="map"></el-tab-pane> -->
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/collection/index.vue   Line:48   //  下拉调取子路由加载方法
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/collection/index.vue   Line:52   //  更新加载状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/collection/topic/index.vue   Line:12   <error class="delay" :text="$t('myCenter.noSave', {name: isCurrentUser ? '你' : 'TA'})" v-if="!loading && !topicList.length"/>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/collection/topic/index.vue   Line:45   //  当前用户是否被查看用户
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/collection/topic/index.vue   Line:53   //  获取
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/collection/topic/index.vue   Line:63   //  查询社区开关
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/index.vue   Line:101   //  下拉调取子路由加载方法
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/index.vue   Line:105   //  更新加载状态
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/war3/index.vue   Line:10   <p class="level">赛季{{ (character.qfExp > character.qfHistoryBestExp ? character.qfExp : character.qfHistoryBestExp) | formatWar3Level }}级</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/war3/index.vue   Line:17   <p class="level">赛季{{ (character.qfExp2nd > character.qfHistoryBestExp2nd ? character.qfExp2nd : character.qfHistoryBestExp2nd) | formatWar3Level }}级</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/war3/index.vue   Line:156   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/war3/index.vue   Line:161   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/war3/index.vue   Line:210   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/war3/index.vue   Line:217   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/war3/index.vue   Line:253   //  查询所有英雄数据统计
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/war3/index.vue   Line:268   //  周战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/war3/index.vue   Line:282   //  获取个人对战辉煌战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/index/index.vue   Line:41   name="荣誉战绩"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/index/index.vue   Line:141   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/index/index.vue   Line:146   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/index/index.vue   Line:195   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/index/index.vue   Line:202   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/index/index.vue   Line:220   return ['MVP', '杀', '辅' , '拆', '魂'];
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/index/index.vue   Line:255   //  周战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/index/index.vue   Line:285   //  荣誉战绩
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/record/index.vue   Line:16   <p class="txt" :class="[ item.isWin ? 'win' : 'lose' ]">{{ item.isWin ? '胜利' : '失败' }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/record/index.vue   Line:57   <p class="integer">{{ $t('title.gamePoints') }}：<span v-if="result.rewardExp > 0">+</span>{{ result.rewardExp }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/record/index.vue   Line:96   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/record/index.vue   Line:118   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/record/index.vue   Line:180   label="称号"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/record/index.vue   Line:202   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/record/index.vue   Line:332   .replace(/3/, '拆').replace(/4/, this.$t('title.assist') + '')
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/dota/record/index.vue   Line:333   .replace(/5/, '魂');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/index/index.vue   Line:55   //  rpg接口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/index/index.vue   Line:113   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/index/index.vue   Line:118   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/index/index.vue   Line:167   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/index/index.vue   Line:174   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/index/index.vue   Line:199   // 查询RPG赛季信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/rank/index.vue   Line:9   '胜',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/rank/index.vue   Line:10   '负',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/rank/index.vue   Line:45   //  rpg接口
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/rank/index.vue   Line:107   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/rank/index.vue   Line:112   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/rank/index.vue   Line:161   name: '胜利',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/rank/index.vue   Line:168   name: '失败',
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/record/index.vue   Line:19   <p class="txt" :class="[ item.isWin ? 'win' : 'lose' ]">{{ item.isWin ? '胜利' : '失败' }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/record/index.vue   Line:67   <p class="integer">{{ $t('title.gamePoints') }}：<span v-if="integral > 0">+</span>{{ integral }}</p>
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/record/index.vue   Line:149   label="装备"
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/record/index.vue   Line:284   .replace(/3/, '拆').replace(/4/, this.$t('title.assist') + '')
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/views/myCenter/record/rpg/record/index.vue   Line:285   .replace(/5/, '魂').split(' ');
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/EvaluationUI.vue   Line:1742   //  绑定手机号
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1922   //  验证提交表单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1943   //  重置表单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1947   //  移除投票选项
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1951   //  移除投票选项
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1955   //  插入投票组件
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1977   //  编辑投票组件
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1979   //  投票表单
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:1993   // 触发销毁组件的回调
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:2001   //  删除投票组件
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:2003   //  删除节点
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:2011   //  移除store中的投票信息
+E:\workspace\duizhan-ms-website\branch\2.2\war-platform\src/components/Forum/index.vue   Line:2028   //  是否绑定手机号
